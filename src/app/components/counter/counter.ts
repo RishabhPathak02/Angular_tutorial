@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -7,14 +7,22 @@ import { Component } from '@angular/core';
   styleUrl: './counter.css',
 })
 export class Counter {
-  count : number = 0 ;
+  count : WritableSignal<number> = signal(0) ;
+  doubleCount = computed(()=> this.count() * 2) ;
+
+  constructor(){
+    effect(()=>{
+      console.log('Count is: ', this.count()) ;
+    });
+  }
+
   increment(){
-    this.count++ ;
+    this.count.update((c)=> c+1) ;
   }
   decrement(){
-    this.count-- ;
+    this.count.update((c)=> c-1) ;
   }
   reset(){
-    this.count = 0 ;
+    this.count.set(0) ;
   }
 }

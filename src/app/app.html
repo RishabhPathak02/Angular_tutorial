@@ -1,5 +1,12 @@
 <h1>rishabh pathak</h1>
 <button (click)="showProfile_func()">Show Profile</button>
 <button (click)="openCounter_func()">openCounter</button>
-<app-profile *ngIf = "showProfile"></app-profile>
+<a routerLink="events">Events</a>
+<br><hr>
+<a routerLink="loops">loops tutorial</a>
+<hr>
+@if(showProfile){
+    <app-profile></app-profile>
+}>
 <app-counter *ngIf = 'showCounter'></app-counter>
+<router-outlet></router-outlet>

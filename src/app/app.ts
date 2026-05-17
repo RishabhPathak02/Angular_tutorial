@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
 import { Profile } from './components/profile/profile';
 import { CommonModule } from '@angular/common';
 import { Counter } from "./components/counter/counter";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, Profile, Counter],
+  imports: [RouterOutlet, CommonModule, Profile, Counter, RouterLinkWithHref],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

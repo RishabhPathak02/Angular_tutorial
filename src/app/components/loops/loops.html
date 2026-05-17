@@ -1,0 +1,36 @@
+<div *ngIf="users.length > 0; else template">
+
+    <div *ngFor="
+        let user of users;
+        let i = index;
+        let firstUser = first;
+        let lastUser = last;
+        let evenRow = even;
+        let oddRow = odd
+    ">
+
+        <h3>{{ user.name }}</h3>
+
+        <p>{{ user.age }}</p>
+
+        <div class="bg-color-green">
+
+            <p>Index: {{ i }}</p>
+
+            <p>First User: {{ firstUser }}</p>
+
+            <p>Last User: {{ lastUser }}</p>
+
+            <p>Even Row: {{ evenRow }}</p>
+
+            <p>Odd Row: {{ oddRow }}</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<ng-template #template>
+    <h1>No User</h1>
+</ng-template>
