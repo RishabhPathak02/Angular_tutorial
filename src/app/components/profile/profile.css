@@ -1,0 +1,43 @@
+.profile-card{
+    width: 320px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    margin: 30px auto;
+    background-color: white;
+}
+
+.profile-img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.role{
+    color: gray;
+    font-size: 15px;
+}
+
+.bio{
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.linkedin-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: #0077b5;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.linkedin-btn:hover{
+    opacity: 0.9;
+}
