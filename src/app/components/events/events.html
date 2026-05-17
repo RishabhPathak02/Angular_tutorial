@@ -1,4 +1,6 @@
 <p>events works!</p>
 <button (click)="handleClick($event)">CLICK</button>
 <input (input)="onInput($event)">
+<input [(ngModel)] = "name">
+{{name}}
 {{provided_input}}
